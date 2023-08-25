@@ -1,7 +1,11 @@
 import styles from "./page.module.scss";
 import Link from "next/link";
+import { auth } from "@clerk/nextjs";
 
-export default function Home() {
+export default async function Home() {
+  const { userId } = await auth();
+  let href = userId ? "/journal" : "/new-user";
+
   return (
     <div className={styles.background}>
       <div className={styles.backgroundOverlay}>
@@ -16,12 +20,9 @@ export default function Home() {
             emotional well-being.
           </p>
           <div className={styles.buttonWrapper}>
-            <Link href="/journal">
+            <Link href={href}>
               <button className={styles.blackButton}>Get started</button>
             </Link>
-            {/* <Link href="/login">
-              <button className={styles.whiteButton}>Login</button>
-            </Link> */}
           </div>
         </div>
       </div>
