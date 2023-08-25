@@ -55,20 +55,20 @@
 .title {
   font-size: 2rem;
   font-weight: 700;
-  color: $primary;
+  color: $primary-dark;
 }
 
 .blackButton {
   width: 120px;
   height: 40px;
-  background-color: $secondary;
-  border: 1px solid $secondary;
+  background-color: $primary;
+  border: 1px solid $primary;
   color: white;
   transition: 0.25s;
   &:hover,
   &:focus {
-    box-shadow: inset 7.5em 0 0 0 #92768a;
-    border: 1px solid #92768a;
+    box-shadow: inset 7.5em 0 0 0 $primary-dark;
+    border: 1px solid $primary-dark;
   }
 }
 
