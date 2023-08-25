@@ -1,4 +1,5 @@
 import styles from "./page.module.scss";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,8 +16,12 @@ export default function Home() {
             emotional well-being.
           </p>
           <div className={styles.buttonWrapper}>
-            <button className={styles.blackButton}>Sign up</button>
-            <button className={styles.whiteButton}>Login</button>
+            <Link href="/journal">
+              <button className={styles.blackButton}>Get started</button>
+            </Link>
+            {/* <Link href="/login">
+              <button className={styles.whiteButton}>Login</button>
+            </Link> */}
           </div>
         </div>
       </div>
