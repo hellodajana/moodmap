@@ -1,7 +1,13 @@
 import React from "react";
 
 const NewEntryCard = () => {
-  return <div>New entry</div>;
+  return (
+    <div>
+      <div>
+        <span>New entry</span>
+      </div>
+    </div>
+  );
 };
 
 export default NewEntryCard;
